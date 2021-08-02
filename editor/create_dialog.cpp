@@ -222,7 +222,7 @@ void CreateDialog::_add_type(const String &p_type, const TypeCategory p_type_cat
 
 		Ref<Script> base = script->get_base_script();
 		if (base.is_null()) {
-			String extends;
+			StringName extends;
 			script->get_language()->get_global_class_name(script->get_path(), &extends);
 
 			inherits = extends;
@@ -242,7 +242,7 @@ void CreateDialog::_add_type(const String &p_type, const TypeCategory p_type_cat
 			if (inherits.is_empty()) {
 				Ref<Script> base = script->get_base_script();
 				if (base.is_null()) {
-					String extends;
+					StringName extends;
 					script->get_language()->get_global_class_name(script->get_path(), &extends);
 
 					inherits = extends;
