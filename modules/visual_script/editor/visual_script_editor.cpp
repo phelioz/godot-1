@@ -4528,15 +4528,15 @@ void VisualScriptEditor::_script_class_icon_btn_set_icon(const String &p_path) {
 void VisualScriptEditor::_script_class_name_text_changed(const String &p_text) {
 	if (script.is_valid()) {
 		script->set_script_class_name(p_text);
+		set_edited(true);
 	}
-	set_edited(true);
 }
 
 void VisualScriptEditor::_script_class_icon_path_text_changed(const String &p_text) {
 	if (script.is_valid()) {
 		script->set_script_class_icon_path(p_text);
+		set_edited(true);
 	}
-	set_edited(true);
 }
 
 void VisualScriptEditor::_bind_methods() {
@@ -4618,8 +4618,7 @@ VisualScriptEditor::VisualScriptEditor() {
 	}
 	fd->set_enable_multiple_selection(false);
 	fd->set_show_hidden_files(false);
-	fd->set_title("Choose an image.");
-	fd->connect("confirmed", callable_mp(this, &VisualScriptEditor::_script_class_icon_path_dialog_confirmed));
+	fd->set_title(TTR("Choose an image."));
 	fd->connect("file_selected", callable_mp(this, &VisualScriptEditor::_script_class_icon_path_dialog_file_selected));
 	_script_class_icon_btn->add_child(fd);
 	_script_class_icon_path_dialog = fd;

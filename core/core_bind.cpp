@@ -2190,10 +2190,6 @@ void ClassDB::_bind_methods() {
 
 ////// _ScriptServer //////
 
-bool ScriptServer::_set(const StringName &p_name, const Variant &p_value) {
-	return false;
-}
-
 bool ScriptServer::_get(const StringName &p_name, Variant &r_ret) const {
 	if (::ScriptServer::is_global_class(p_name)) {
 		r_ret = ::ResourceLoader::load(::ScriptServer::get_global_class_path(p_name), "Script");

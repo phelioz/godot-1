@@ -43,7 +43,6 @@
 #endif // DEBUG_ENABLED
 
 #ifdef TOOLS_ENABLED
-#include "editor/editor_node.h"
 #include "editor/editor_settings.h"
 #endif // TOOLS_ENABLED
 
