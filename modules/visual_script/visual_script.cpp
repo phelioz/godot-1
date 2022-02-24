@@ -2267,7 +2267,7 @@ StringName VisualScriptLanguage::get_global_class_name(const String &p_path, Str
 		*r_base_type = script->get_instance_base_type();
 	if (r_icon_path)
 		*r_icon_path = script->get_script_class_icon_path();
-	return String(script->get_script_class_name()).is_valid_identifier() ? script->get_script_class_name() : StringName();
+	return script->get_script_class_name();
 }
 
 /* EDITOR FUNCTIONS */
