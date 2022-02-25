@@ -51,6 +51,7 @@
 class RenameDialog;
 #endif // MODULE_REGEX_ENABLED
 
+class EditorNode;
 class ShaderCreateDialog;
 
 class SceneTreeDock : public VBoxContainer {
@@ -173,6 +174,7 @@ class SceneTreeDock : public VBoxContainer {
 	void _do_create(Node *p_parent);
 	Node *scene_root;
 	Node *edited_scene;
+	EditorNode *editor;
 
 	VBoxContainer *create_root_dialog;
 	String selected_favorite_root;

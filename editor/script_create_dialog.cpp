@@ -49,7 +49,7 @@ static String _get_parent_class_of_script(String p_path) {
 	Ref<Script> script = ResourceLoader::load(p_path, "Script");
 	ERR_FAIL_COND_V(script.is_null(), "Object");
 
-	String class_name;
+	StringName class_name;
 	Ref<Script> base = script->get_base_script();
 
 	// Inherits from a built-in class.
@@ -60,7 +60,7 @@ static String _get_parent_class_of_script(String p_path) {
 
 	// Inherits from a script that has class_name.
 	class_name = script->get_language()->get_global_class_name(base->get_path());
-	if (!class_name.is_empty()) {
+	if (class_name != StringName()) {
 		return class_name;
 	}
 

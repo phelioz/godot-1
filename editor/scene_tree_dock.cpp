@@ -574,7 +574,7 @@ void SceneTreeDock::_tool_selected(int p_tool, bool p_confirm_override) {
 				editor_data->get_undo_redo().add_do_method(editor, "push_item", (Script *)NULL);
 				for (int i = 0; i < update_array.size(); i++) {
 					Array an_update = update_array[i];
-					Node *n = an_update[0];
+					Node *n = Object::cast_to<Node>(an_update[0]);
 					Ref<Script> do_script = an_update[1];
 					Ref<Script> undo_script = an_update[2];
 					editor_data->get_undo_redo().add_do_method(n, "set_script", do_script);

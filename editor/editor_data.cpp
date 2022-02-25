@@ -976,6 +976,15 @@ Variant EditorData::script_class_instance(const StringName &p_class) const {
 	return Variant();
 }
 
+Ref<Script> EditorData::script_class_load_script(const String &p_class) const {
+	if (!ScriptServer::is_global_class(p_class)) {
+		return Ref<Script>();
+	}
+
+	String path = ScriptServer::get_global_class_path(p_class);
+	return ResourceLoader::load(path, "Script");
+}
+
 void EditorData::script_class_set_icon_path(const StringName &p_class, const String &p_icon_path) {
 	_script_class_icon_paths[p_class] = p_icon_path;
 }

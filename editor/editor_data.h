@@ -220,6 +220,7 @@ public:
 	Variant script_class_instance(const StringName &p_class) const;
 
 	Ref<Script> script_class_get_base_from_anonymous_path(const String &p_path) const;
+	Ref<Script> script_class_load_script(const String &p_class) const;
 
 	String script_class_get_icon_path(const StringName &p_class) const;
 	void script_class_set_icon_path(const StringName &p_class, const String &p_icon_path);
