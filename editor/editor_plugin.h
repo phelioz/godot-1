@@ -42,6 +42,7 @@
 #include "scene/3d/camera_3d.h"
 #include "scene/main/node.h"
 #include "scene/resources/texture.h"
+#include "editor/editor_file_system.h"
 
 class Node3D;
 class Camera3D;
@@ -53,7 +54,6 @@ class EditorImportPlugin;
 class EditorExportPlugin;
 class EditorNode3DGizmoPlugin;
 class EditorResourcePreview;
-class EditorFileSystem;
 class EditorToolAddons;
 class EditorPaths;
 class FileSystemDock;
