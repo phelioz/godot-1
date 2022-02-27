@@ -34,6 +34,7 @@
 #include "core/io/config_file.h"
 #include "core/object/undo_redo.h"
 #include "editor/debugger/editor_debugger_node.h"
+#include "editor/editor_file_system.h"
 #include "editor/editor_inspector.h"
 #include "editor/editor_translation_parser.h"
 #include "editor/import/editor_import_plugin.h"
@@ -42,7 +43,6 @@
 #include "scene/3d/camera_3d.h"
 #include "scene/main/node.h"
 #include "scene/resources/texture.h"
-#include "editor/editor_file_system.h"
 
 class Node3D;
 class Camera3D;
