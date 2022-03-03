@@ -37,6 +37,7 @@
 #include "core/templates/safe_refcount.h"
 #include "core/templates/set.h"
 #include "core/templates/thread_work_pool.h"
+#include "editor/editor_resource_picker.h"
 #include "scene/main/node.h"
 
 class FileAccess;

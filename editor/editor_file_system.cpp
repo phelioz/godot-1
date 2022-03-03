@@ -1487,6 +1487,7 @@ void EditorFileSystem::update_script_classes() {
 
 	update_script_classes_queued.clear();
 	ScriptServer::global_classes_clear();
+	EditorResourcePicker::clear_caches();
 	if (get_filesystem()) {
 		_scan_script_classes(get_filesystem());
 	}
